@@ -44,7 +44,7 @@ window.addEventListener("load", () => {
         previous.value = subtract(current.value, previous.value);
         current.value = "";
       }
-      if (e.target.textContent === "x") {
+      if (e.target.textContent === "X") {
         operator = "X";
         operatorValue.textContent = operator;
         previous.value = mult(current.value, previous.value);

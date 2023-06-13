@@ -55,7 +55,9 @@ html {
     align-items: center;
     display: flex;
     justify-content: end;
-    color: black;
+}
+.previous {
+    color: white;
 }
 
 .current {
