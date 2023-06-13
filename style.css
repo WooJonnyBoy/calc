@@ -1,104 +1,113 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    color-scheme: ligt dark;
+  color-scheme: ligt dark;
 }
 
 .container {
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
 }
 
 .calc {
-    max-width: 500px;
-    width: 50%;
-    min-width: 350px;
-    height: 80%;
-    min-height: 500px;
-    border-radius: 1rem;
-    background-color: rgb(53, 53, 53);
+  max-width: 500px;
+  width: 50%;
+  min-width: 350px;
+  height: 100%;
+  min-height: 500px;
+  background-color: rgb(53, 53, 53);
+  overflow: auto;
 }
 
 .screen {
-    color: black;
-    width: 94%;
-    margin: 1rem auto;
-    height: 10rem;
-    border-radius: 1rem;
-    background-color: #fff;
-    position: relative;
+  width: 94%;
+  margin: 1rem auto;
+  height: 10rem;
+  border-radius: 1rem;
+  position: relative;
 }
 
 .operator {
-    font-size: 2rem;
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    color: black;
-    transform: translateY(-50%);
+  font-size: 2rem;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  color: black;
+  transform: translateY(-50%);
 }
 
-.previous, .current {
-    width: 100%;
-    border: none;
-    text-align: end;
-    height: 50%;
-    padding: 0 5px;
-    font-size: 1.5rem;
-    align-items: center;
-    display: flex;
-    justify-content: end;
+.previous,
+.current {
+  width: 100%;
+  border: none;
+  text-align: end;
+  height: 50%;
+  padding: 0 5px;
+  align-items: center;
+  display: flex;
+  justify-content: end;
 }
+
 .previous {
-    color: white;
+  color: black;
+  font-size: 1.7rem;
+  background-color: rgb(177, 174, 174);
+  border-radius: 5px 5px 0 0;
 }
 
 .current {
-    border-radius: 0 0 1rem 1rem;
-    font-size: 2.5rem;
-    outline: none;
-    color: black;
-    background-color: white;
+  border-radius: 0 0 5px 5px;
+  font-size: 2.5rem;
+  outline: none;
+  color: black;
+  background-color: white;
 }
 
 .keyboard {
-    padding: 1rem;
-    width: 94%;
-    margin: 1rem auto;
-    height: calc(100% - 13rem);
-    border-radius: 1rem;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
+  padding: 5px 0 5px 0;
+  width: 94%;
+  margin: 1rem auto;
+  height: calc(100% - 13rem);
+  border-radius: 5px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .key {
-    font-size: 2.5rem;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 23%;
-    background-color: #f2661b;
-    box-shadow: 0 0 5px 1px rgba(32, 15, 209, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.7);
+  font-size: 2.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 23%;
+  background-color: #f2661b;
+  box-shadow: 0 0 5px 1px rgba(32, 15, 209, 0.5),
+    inset 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .key:active {
-    background-color: #d55916;
+  background-color: #d55916;
 }
 
 .key:nth-child(19) {
-    min-width: 46%;
+  min-width: 46%;
 }
 .key:nth-child(16) {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
+}
+
+@media (width < 500px) {
+  .calc {
+    width: 100dvw;
+  }
 }
